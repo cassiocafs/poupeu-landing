@@ -1,0 +1,42 @@
+:root{
+/* Brand — primary */
+--green-900:#0D5B2E;--green-800:#0F6A36;--green-700:#17853F;--green-600:#1FA34A;--green-500:#35B45E;--green-300:#8FD9A9;--green-200:#C2ECD1;--green-100:#E4F6EA;
+/* Brand — accent */
+--yellow-700:#B98600;--yellow-600:#E0A806;--yellow-500:#FFC107;--yellow-300:#FFDD73;--yellow-200:#FFECB3;--yellow-100:#FFF7E0;
+/* Brand — cream */
+--cream-200:#EFDCB8;--cream-100:#F5E6C8;--cream-50:#FBF4E6;--cream-bg:#FBF8F0;
+/* Neutrals — warm, faintly green */
+--neutral-0:#FFFFFF;--neutral-50:#F7F9F8;--neutral-100:#EDF1EF;--neutral-200:#DDE4E0;--neutral-300:#C2CCC7;--neutral-400:#9BA8A1;--neutral-500:#77887F;--neutral-600:#566860;--neutral-700:#3A4B41;--neutral-800:#24312A;--neutral-900:#16201B;
+/* Semantic scales */
+--success-600:#17853F;--success-500:#1FA34A;--success-100:#E4F6EA;
+--warning-600:#B98600;--warning-500:#FFC107;--warning-100:#FFF7E0;
+--error-600:#B32D24;--error-500:#D93B30;--error-100:#FDECEA;
+--info-600:#1D5FBF;--info-500:#2C7BE5;--info-100:#E8F1FD;
+
+/* ---- Semantic aliases: use these in product UI ---- */
+--color-primary:var(--green-900);--color-primary-hover:#0A4A25;--color-primary-active:#083B1E;--color-primary-soft:var(--green-100);
+--color-secondary:var(--green-600);--color-accent:var(--yellow-500);
+--bg-page:var(--cream-bg);--bg-page-app:var(--neutral-50);--bg-subtle:var(--cream-100);--bg-inverse:var(--green-900);
+--surface-card:var(--neutral-0);--surface-raised:var(--neutral-0);--surface-sunken:var(--neutral-50);--surface-brand:var(--green-900);--surface-cream:var(--cream-50);
+--text-primary:var(--neutral-900);--text-body:var(--neutral-700);--text-muted:var(--neutral-500);--text-disabled:var(--neutral-400);--text-on-brand:#FFFFFF;--text-brand:var(--green-900);--text-accent:var(--yellow-700);
+--border-subtle:var(--neutral-200);--border-default:var(--neutral-300);--border-strong:var(--neutral-400);--border-brand:var(--green-900);--divider:var(--neutral-100);
+--focus-ring:var(--green-600);--overlay:rgba(22,32,27,.40);
+
+/* Money semantics (§35): income green, expense NEUTRAL, red only for real problems */
+--money-in:var(--green-600);--money-out:var(--neutral-900);--money-neutral:var(--neutral-700);--money-alert:var(--error-500);
+
+/* Charts (§18) — max six, brand-led */
+--chart-1:#0D5B2E;--chart-2:#1FA34A;--chart-3:#2C7BE5;--chart-4:#FFC107;--chart-5:#D93B30;--chart-6:#C2CCC7;--chart-track:#EDF1EF;
+
+/* Categories (§17) — muted, harmonised; each has a fg and a soft tint */
+--cat-alimentacao:#C2681E;--cat-alimentacao-bg:#FBEEE2;
+--cat-casa:#17853F;--cat-casa-bg:#E4F6EA;
+--cat-transporte:#2C7BE5;--cat-transporte-bg:#E8F1FD;
+--cat-compras:#8A5CC7;--cat-compras-bg:#F1EAFB;
+--cat-lazer:#D2517E;--cat-lazer-bg:#FBE9F0;
+--cat-saude:#1FA39A;--cat-saude-bg:#E2F5F3;
+--cat-educacao:#3A63C4;--cat-educacao-bg:#EAEFFB;
+--cat-assinaturas:#5C6B77;--cat-assinaturas-bg:#EDF1F4;
+--cat-viagem:#B98600;--cat-viagem-bg:#FFF7E0;
+--cat-outros:#77887F;--cat-outros-bg:#EDF1EF;
+}

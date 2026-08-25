@@ -1,0 +1,6 @@
+:root{
+--container-max:1200px;--container-max-wide:1280px;--grid-columns:12/* @kind other */;--grid-gutter:24px;--page-padding:24px;
+--container-tablet-columns:8/* @kind other */;--container-mobile-columns:4/* @kind other */;--page-padding-mobile:20px;
+--breakpoint-tablet:768px;--breakpoint-desktop:1024px;--breakpoint-large:1440px;
+--sidebar-width:248px;--sidebar-width-collapsed:76px;--header-height:72px;--bottom-nav-height:72px;--app-max-width:420px;
+}

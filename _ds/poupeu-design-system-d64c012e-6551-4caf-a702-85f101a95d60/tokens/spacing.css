@@ -1,0 +1,6 @@
+:root{
+--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-6:24px;--space-8:32px;--space-10:40px;--space-12:48px;--space-16:64px;--space-20:80px;--space-24:96px;--space-32:128px;
+--space-xs:var(--space-1);--space-sm:var(--space-2);--space-md:var(--space-4);--space-lg:var(--space-6);--space-xl:var(--space-8);--space-2xl:var(--space-12);--space-3xl:var(--space-16);
+/* Component rhythm */
+--card-padding:24px;--card-padding-compact:16px;--section-gap:24px;--section-gap-marketing:96px;--control-height:48px;--control-height-sm:40px;--control-height-lg:56px;--touch-min:44px;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poupeu — Seu dinheiro, do seu jeito.</title>
+<link rel="stylesheet" href="_ds/poupeu-design-system-d64c012e-6551-4caf-a702-85f101a95d60/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/poupeu-design-system-d64c012e-6551-4caf-a702-85f101a95d60/tokens/colors.css">
+<link rel="stylesheet" href="_ds/poupeu-design-system-d64c012e-6551-4caf-a702-85f101a95d60/tokens/typography.css">
+<link rel="stylesheet" href="_ds/poupeu-design-system-d64c012e-6551-4caf-a702-85f101a95d60/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/poupeu-design-system-d64c012e-6551-4caf-a702-85f101a95d60/tokens/radius.css">
+<link rel="stylesheet" href="_ds/poupeu-design-system-d64c012e-6551-4caf-a702-85f101a95d60/tokens/shadows.css">
+<link rel="stylesheet" href="_ds/poupeu-design-system-d64c012e-6551-4caf-a702-85f101a95d60/tokens/motion.css">
+<link rel="stylesheet" href="_ds/poupeu-design-system-d64c012e-6551-4caf-a702-85f101a95d60/tokens/layout.css">
+<link rel="stylesheet" href="_ds/poupeu-design-system-d64c012e-6551-4caf-a702-85f101a95d60/tokens/base.css">
+<link rel="stylesheet" href="_ds/poupeu-design-system-d64c012e-6551-4caf-a702-85f101a95d60/styles.css">
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{background:var(--neutral-0);overflow-x:hidden}
+.pu-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.pu-sec{padding:96px 0}
+.pu-sec-tight{padding:72px 0}
+.pu-cream{background:var(--cream-bg)}
+.pu-eyebrow{font:var(--type-caption);letter-spacing:var(--tracking-caps);text-transform:uppercase;color:var(--green-600);margin:0 0 12px}
+.pu-display{font:var(--weight-extrabold) clamp(34px,5.6vw,56px)/1.04 var(--font-display);letter-spacing:var(--tracking-tight);color:var(--green-900);margin:0}
+.pu-h2{font:var(--weight-bold) clamp(26px,3.6vw,36px)/1.15 var(--font-display);letter-spacing:var(--tracking-tight);color:var(--green-900);margin:0}
+.pu-h3{font:var(--type-h3);color:var(--text-primary);margin:0}
+.pu-lead{font:var(--weight-regular) clamp(16px,1.4vw,18px)/1.6 var(--font-sans);color:var(--text-body);margin:16px 0 0;max-width:56ch;text-wrap:pretty}
+.pu-body{font:var(--type-body);color:var(--text-body);margin:0;text-wrap:pretty}
+/* header */
+.pu-header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border-subtle)}
+.pu-header-in{max-width:1200px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;gap:24px}
+.pu-nav{display:flex;gap:32px;margin:0 auto}
+.pu-nav a{font:var(--type-label);color:var(--text-body);padding:8px 0;text-decoration:none}
+.pu-nav a:hover{color:var(--green-900)}
+.pu-burger{display:none;width:44px;height:44px;align-items:center;justify-content:center;border:1px solid var(--border-subtle);border-radius:var(--radius-md);background:var(--neutral-0);cursor:pointer}
+.pu-mobile-menu{display:none;flex-direction:column;gap:4px;padding:8px 24px 24px;border-top:1px solid var(--border-subtle);background:var(--neutral-0)}
+.pu-mobile-menu.open{display:flex}
+.pu-mobile-menu a{font:var(--weight-medium) 17px/1 var(--font-sans);color:var(--text-primary);padding:14px 0;text-decoration:none}
+/* layouts */
+.pu-hero{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center;padding:72px 0 96px}
+.pu-split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.pu-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pu-grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.pu-grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pu-row{display:flex;gap:16px;flex-wrap:wrap}
+.pu-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:32px}
+.pu-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;align-items:end;justify-items:center}
+/* reveal */
+.pu-rev{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease-standard),transform .6s var(--ease-standard)}
+.pu-rev.pu-in{opacity:1;transform:none}
+#root footer img{flex:none;width:auto!important;height:44px;align-self:flex-start}
+.pu-phone{--text-display:30px}
+.pu-phone [style*="font-numeric"]{white-space:nowrap}
+@keyframes pu-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.pu-float{animation:pu-float 5.5s ease-in-out infinite}
+.pu-float-b{animation:pu-float 6.5s ease-in-out infinite .8s}
+.pu-mascot-nudge{transition:transform var(--duration-slow,300ms) var(--ease-standard)}
+.pu-mascot-nudge:hover{transform:translateY(-6px) rotate(-1.5deg)}
+@media(max-width:1000px){
+.pu-sec{padding:72px 0}
+.pu-hero{grid-template-columns:1fr;gap:40px;padding:48px 0 72px}
+.pu-split{grid-template-columns:1fr;gap:40px}
+.pu-grid3{grid-template-columns:repeat(2,1fr)}
+.pu-grid4{grid-template-columns:repeat(2,1fr)}
+.pu-trio{grid-template-columns:1fr;gap:40px}
+.pu-nav{display:none}
+.pu-burger{display:flex}
+}
+@media(max-width:640px){
+.pu-sec,.pu-sec-tight{padding:56px 0}
+.pu-wrap{padding:0 20px}
+.pu-header-in{padding:0 20px;height:64px}
+.pu-grid3,.pu-grid2,.pu-grid4{grid-template-columns:1fr}
+.pu-actions>*{width:100%}
+.pu-hide-sm{display:none!important}
+}
+@media(prefers-reduced-motion:reduce){.pu-rev{opacity:1;transform:none;transition:none}.pu-float,.pu-float-b{animation:none}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script>window.POUPEU_ASSET_BASE='assets/mascot-cut/';</script>
+<script src="_ds/poupeu-design-system-d64c012e-6551-4caf-a702-85f101a95d60/_ds_bundle.js"></script>
+<script type="text/babel" src="poupeu/lp-shared.jsx"></script>
+<script type="text/babel" src="poupeu/lp-top.jsx"></script>
+<script type="text/babel" src="poupeu/lp-mid.jsx"></script>
+<script type="text/babel" src="poupeu/lp-bottom.jsx"></script>
+<script type="text/babel" src="poupeu/lp-app.jsx"></script>
+</body>
+</html>

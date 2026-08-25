@@ -1,0 +1,24 @@
+:root{
+/* Sizes (§7) */
+--text-display-xl:56px;--text-display:44px;--text-h1:36px;--text-h2:30px;--text-h3:23px;--text-h4:19px;--text-body-lg:18px;--text-body:16px;--text-body-sm:14px;--text-caption:12px;
+/* Mobile display steps */
+--text-display-xl-mobile:36px;--text-display-mobile:30px;--text-h1-mobile:26px;--text-h2-mobile:22px;
+/* Line heights */
+--leading-tight:1.1;--leading-snug:1.25;--leading-normal:1.5;--leading-relaxed:1.6;
+/* Weights */
+--weight-regular:400;--weight-medium:500;--weight-semibold:600;--weight-bold:700;--weight-extrabold:800;
+/* Tracking */
+--tracking-tight:-0.02em;--tracking-normal:0;--tracking-wide:0.04em;--tracking-caps:0.08em;
+/* Roles */
+--type-display:var(--weight-extrabold) var(--text-display)/var(--leading-tight) var(--font-display);
+--type-h1:var(--weight-bold) var(--text-h1)/var(--leading-snug) var(--font-display);
+--type-h2:var(--weight-bold) var(--text-h2)/var(--leading-snug) var(--font-display);
+--type-h3:var(--weight-bold) var(--text-h3)/var(--leading-snug) var(--font-sans);
+--type-h4:var(--weight-semibold) var(--text-h4)/var(--leading-snug) var(--font-sans);
+--type-body:var(--weight-regular) var(--text-body)/var(--leading-relaxed) var(--font-sans);
+--type-body-sm:var(--weight-regular) var(--text-body-sm)/var(--leading-normal) var(--font-sans);
+--type-label:var(--weight-medium) var(--text-body-sm)/var(--leading-normal) var(--font-sans);
+--type-caption:var(--weight-medium) var(--text-caption)/var(--leading-normal) var(--font-sans);
+--type-money-lg:var(--weight-bold) var(--text-display)/var(--leading-tight) var(--font-numeric);
+--type-money:var(--weight-semibold) var(--text-h3)/var(--leading-snug) var(--font-numeric);
+}

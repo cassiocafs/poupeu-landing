@@ -1,0 +1,7 @@
+:root{
+--shadow-sm:0 2px 8px rgba(13,91,46,.06);
+--shadow-md:0 4px 16px rgba(13,91,46,.08);
+--shadow-lg:0 8px 32px rgba(13,91,46,.10);
+--shadow-focus:0 0 0 3px rgba(31,163,74,.35);
+--shadow-inset-track:inset 0 0 0 1px rgba(13,91,46,.04);
+}
