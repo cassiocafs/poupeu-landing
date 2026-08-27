@@ -17,7 +17,7 @@ function Header() {
           {NAV.map(n => <a key={n.label} href={n.href}>{n.label}</a>)}
         </nav>
         <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 12 }}>
-          <span className="pu-hide-sm"><Button size="sm">Começar agora</Button></span>
+          <span className="pu-hide-sm"><Button size="sm" as="a" href="https://www.nossasfinancas.com/login">Começar agora</Button></span>
           <button className="pu-burger" aria-expanded={open} aria-label={open ? 'Fechar menu' : 'Abrir menu'} onClick={() => setOpen(!open)}>
             <Icon name={open ? 'x' : 'menu'} size={22} color="var(--green-900)" />
           </button>
@@ -25,7 +25,7 @@ function Header() {
       </div>
       <div className={'pu-mobile-menu' + (open ? ' open' : '')}>
         {NAV.map(n => <a key={n.label} href={n.href} onClick={() => setOpen(false)}>{n.label}</a>)}
-        <Button fullWidth onClick={() => setOpen(false)}>Começar agora</Button>
+        <Button fullWidth as="a" href="https://www.nossasfinancas.com/login" onClick={() => setOpen(false)}>Começar agora</Button>
       </div>
     </header>
   );
@@ -57,7 +57,7 @@ function Hero() {
         <h1 className="pu-display" style={{ margin: '20px 0 0' }}>Seu dinheiro,<br />do seu jeito.</h1>
         <p className="pu-lead">Organize suas finanças, acompanhe seus gastos e entenda melhor o seu dinheiro — de um jeito simples e sem complicação.</p>
         <div className="pu-actions">
-          <Button size="lg" iconRight="arrow-right">Começar agora</Button>
+          <Button size="lg" iconRight="arrow-right" as="a" href="https://www.nossasfinancas.com/login">Começar agora</Button>
           <Button size="lg" variant="secondary" as="a" href="#produto">Conheça o Poupeu</Button>
         </div>
         <p style={{ margin: '20px 0 0', font: 'var(--type-body-sm)', color: 'var(--text-muted)' }}>Simples para começar. Feito para acompanhar você.</p>
