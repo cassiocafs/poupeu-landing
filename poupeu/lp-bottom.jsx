@@ -82,7 +82,7 @@ function FinalCTA() {
           <h2 className="pu-display" style={{ color: '#fff' }}>Seu dinheiro.<br />Do seu jeito.</h2>
           <p className="pu-lead" style={{ color: 'rgba(255,255,255,.82)' }}>Comece a entender, organizar e cuidar melhor das suas finanças.</p>
           <div className="pu-actions">
-            <Button variant="accent" size="lg" iconRight="arrow-right" as="a" href="https://www.nossasfinancas.com/login">Começar agora</Button>
+            <Button variant="accent" size="lg" iconRight="arrow-right" as="a" href="https://www.nossasfinancas.com/">Começar agora</Button>
           </div>
         </Reveal>
         <Reveal delay={120} style={{ display: 'flex', justifyContent: 'center' }}>
