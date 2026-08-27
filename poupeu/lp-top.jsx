@@ -11,7 +11,7 @@ function Header() {
     <header className="pu-header">
       <div className="pu-header-in">
         <a href="#top" aria-label="Poupeu — início" style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="assets/logo-horizontal-cut.png" alt="Poupeu" style={{ height: 40, width: 'auto' }} />
+          <img src="assets/mascot-cut/logo-horizontal.png" alt="Poupeu" style={{ height: 40, width: 'auto' }} />
         </a>
         <nav className="pu-nav" aria-label="Navegação principal">
           {NAV.map(n => <a key={n.label} href={n.href}>{n.label}</a>)}

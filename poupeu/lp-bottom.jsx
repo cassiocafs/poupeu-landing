@@ -96,7 +96,7 @@ function FinalCTA() {
 function Footer() {
   return (
     <SiteFooter
-      logoSrc="assets/logo-horizontal-cut.png"
+      logoSrc="assets/mascot-cut/logo-horizontal.png"
       trust={[{ title: 'Seu dinheiro, do seu jeito.', detail: 'Organização financeira pessoal, feita no Brasil.' }]}
       columns={[
         { title: 'Produto', links: ['Produto', 'Como funciona', 'Benefícios'] },
