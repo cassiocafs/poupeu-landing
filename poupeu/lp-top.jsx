@@ -10,13 +10,13 @@ function Header() {
   return (
     <header className="pu-header">
       <div className="pu-header-in">
-        <a href="#top" aria-label="Poupeu — início" className="pu-logo" style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="assets/mascot-cut/logo-horizontal.png" alt="Poupeu" style={{ height: 48, width: 'auto' }} />
-        </a>
         <nav className="pu-nav" aria-label="Navegação principal">
           {NAV.map(n => <a key={n.label} href={n.href}>{n.label}</a>)}
         </nav>
-        <div className="pu-header-actions" style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 12 }}>
+        <a href="#top" aria-label="Poupeu — início" className="pu-logo" style={{ display: 'flex', alignItems: 'center' }}>
+          <img src="assets/mascot-cut/logo-horizontal.png" alt="Poupeu" style={{ height: 56, width: 'auto' }} />
+        </a>
+        <div className="pu-header-actions" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 12 }}>
           <span className="pu-hide-sm"><Button size="sm" as="a" href={APP_URL}>Começar agora</Button></span>
           <button className="pu-burger" aria-expanded={open} aria-label={open ? 'Fechar menu' : 'Abrir menu'} onClick={() => setOpen(!open)}>
             <Icon name={open ? 'x' : 'menu'} size={22} color="var(--green-900)" />
@@ -53,14 +53,18 @@ function Hero() {
   return (
     <section id="top" className="pu-wrap pu-hero">
       <Reveal>
-        <Badge tone="accent" icon="paw-print">Seu guia financeiro</Badge>
+        <div style={{ textAlign: 'center' }}>
+          <Badge tone="accent" icon="paw-print" style={{ font: 'var(--weight-semibold) 15px/1.3 var(--font-sans)', padding: '7px 14px' }}>Seu guia financeiro</Badge>
+        </div>
         <h1 className="pu-display" style={{ margin: '20px 0 0' }}>Seu dinheiro,<br />do seu jeito.</h1>
         <p className="pu-lead">Organize suas finanças, acompanhe seus gastos e entenda melhor o seu dinheiro — de um jeito simples e sem complicação.</p>
-        <div className="pu-actions">
-          <Button size="lg" iconRight="arrow-right" as="a" href={APP_URL}>Começar agora</Button>
-          <Button size="lg" variant="secondary" as="a" href="#produto">Conheça o Poupeu</Button>
+        <div className="pu-hero-cta" style={{ width: 'fit-content' }}>
+          <div className="pu-actions">
+            <Button size="lg" iconRight="arrow-right" as="a" href={APP_URL}>Começar agora</Button>
+            <Button size="lg" variant="secondary" as="a" href="#produto">Conheça o Poupeu</Button>
+          </div>
+          <p style={{ width: '100%', margin: '16px 0 0', font: 'var(--weight-regular) 13px/1.5 var(--font-sans)', color: 'var(--text-muted)' }}>Simples para começar. Feito para acompanhar você.</p>
         </div>
-        <p style={{ margin: '20px 0 0', font: 'var(--type-body-sm)', color: 'var(--text-muted)' }}>Simples para começar. Feito para acompanhar você.</p>
       </Reveal>
       <Reveal delay={120} className="pu-hero-visual-wrap" style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
         <div className="pu-hero-blob" style={{ position: 'absolute', inset: '-6% -4% 8%', background: 'var(--cream-bg)', borderRadius: '48% 42% 46% 44%' }}></div>

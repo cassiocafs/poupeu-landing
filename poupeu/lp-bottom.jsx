@@ -93,17 +93,31 @@ function FinalCTA() {
   );
 }
 
+const FOOTER_COLUMNS = [
+  { title: 'Produto', links: ['Produto', 'Como funciona', 'Benefícios'] },
+  { title: 'Legal', links: ['Privacidade', 'Termos'] },
+];
+
 function Footer() {
   return (
-    <SiteFooter
-      logoSrc="assets/mascot-cut/logo-horizontal.png"
-      trust={[{ title: 'Seu dinheiro, do seu jeito.', detail: 'Organização financeira pessoal, feita no Brasil.' }]}
-      columns={[
-        { title: 'Produto', links: ['Produto', 'Como funciona', 'Benefícios'] },
-        { title: 'Legal', links: ['Privacidade', 'Termos'] },
-      ]}
-      legal="© 2026 Poupeu. Todos os direitos reservados."
-    />
+    <footer style={{ background: 'var(--cream-50)', borderTop: '1px solid var(--cream-200)', padding: '48px 24px 32px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: 4, paddingBottom: 28, borderBottom: '1px solid var(--cream-200)' }}>
+        <div style={{ font: 'var(--weight-semibold) 15px/1.3 var(--font-sans)', color: 'var(--text-primary)' }}>Seu dinheiro, do seu jeito.</div>
+        <div style={{ font: 'var(--type-body-sm)', color: 'var(--text-muted)' }}>Organização financeira pessoal, feita no Brasil.</div>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 24, paddingTop: 32 }}>
+        <img src="assets/mascot-cut/logo-horizontal.png" alt="Poupeu" style={{ height: 56, width: 'auto' }} />
+        <div style={{ display: 'flex', gap: 64, flexWrap: 'wrap', justifyContent: 'center' }}>
+          {FOOTER_COLUMNS.map(c => (
+            <div key={c.title} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+              <span style={{ font: 'var(--type-caption)', letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-muted)' }}>{c.title}</span>
+              {c.links.map(l => <a key={l} href="#" style={{ font: 'var(--type-body-sm)', color: 'var(--text-body)', fontWeight: 'var(--weight-regular)' }}>{l}</a>)}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div style={{ marginTop: 28, textAlign: 'center', font: 'var(--type-caption)', color: 'var(--text-muted)' }}>© 2026 Poupeu. Todos os direitos reservados.</div>
+    </footer>
   );
 }
 
