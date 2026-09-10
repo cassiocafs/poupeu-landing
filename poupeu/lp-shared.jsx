@@ -1,6 +1,9 @@
 const DS = window.PoupeuDesignSystem_d64c01;
 const { Button, Card, Badge, Chip, Icon, Mascot, MascotMessage, InsightCard, FeatureCard, CTASection, SiteFooter, FinancialCard, StatCard, GoalCard, ProgressBar, TransactionItem, DonutChart, BarChart, LineChart } = DS;
 
+// Link único para todos os botões "Começar agora".
+const APP_URL = 'https://app.poupeu.com/';
+
 function Reveal({ children, delay = 0, as = 'div', className = '', style }) {
   const ref = React.useRef(null);
   React.useEffect(() => {
@@ -25,7 +28,7 @@ function SectionHead({ eyebrow, title, sub, align = 'left', max = 620 }) {
 function PhoneFrame({ children, width = 320, label, style }) {
   return (
     <div className="pu-phone" style={{
-      width, flex: 'none', background: 'var(--neutral-900)', borderRadius: 44, padding: 9,
+      width, maxWidth: '100%', flex: 'none', background: 'var(--neutral-900)', borderRadius: 44, padding: 9,
       boxShadow: 'var(--shadow-lg)', ...style,
     }}>
       <div style={{ background: 'var(--bg-page-app)', borderRadius: 36, overflow: 'hidden' }}>
@@ -140,4 +143,18 @@ function ScreenGoals() {
   );
 }
 
-Object.assign(window, { DS, Button, Card, Badge, Chip, Icon, Mascot, MascotMessage, InsightCard, FeatureCard, CTASection, SiteFooter, FinancialCard, StatCard, GoalCard, ProgressBar, TransactionItem, DonutChart, BarChart, LineChart, Reveal, SectionHead, PhoneFrame, AppGreeting, ScreenHome, ScreenTransactions, ScreenGoals, CAT_SLICES, MONTH_BARS, BAR_SERIES });
+// CTA de fechamento responsiva: no mobile empilha imagem, texto e depois o botão.
+function ClosingCTA({ title, subtitle, cta = 'Começar agora', mascot = 'encouraging' }) {
+  return (
+    <div className="pu-closing-cta">
+      <Mascot state={mascot} size={132} className="pu-closing-cta-mascot" style={{ flex: 'none' }} />
+      <div className="pu-closing-cta-body">
+        <h3 style={{ font: 'var(--type-h3)', color: '#fff' }}>{title}</h3>
+        {subtitle && <p style={{ margin: '6px 0 0', font: 'var(--type-body-sm)', color: 'rgba(255,255,255,.8)' }}>{subtitle}</p>}
+      </div>
+      <Button className="pu-closing-cta-btn" variant="accent" size="lg" iconRight="arrow-right" as="a" href={APP_URL}>{cta}</Button>
+    </div>
+  );
+}
+
+Object.assign(window, { DS, APP_URL, Button, Card, Badge, Chip, Icon, Mascot, MascotMessage, InsightCard, FeatureCard, CTASection, SiteFooter, FinancialCard, StatCard, GoalCard, ProgressBar, TransactionItem, DonutChart, BarChart, LineChart, Reveal, SectionHead, PhoneFrame, ClosingCTA, AppGreeting, ScreenHome, ScreenTransactions, ScreenGoals, CAT_SLICES, MONTH_BARS, BAR_SERIES });

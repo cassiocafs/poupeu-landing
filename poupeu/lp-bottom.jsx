@@ -37,7 +37,7 @@ function HowItWorks() {
           ))}
         </div>
         <Reveal delay={140} style={{ marginTop: 56 }}>
-          <CTASection title="Pronto para começar do seu jeito?" subtitle="Leva poucos minutos e o Poupeu segue com você depois." />
+          <ClosingCTA title="Pronto para começar do seu jeito?" subtitle="Leva poucos minutos e o Poupeu segue com você depois." />
         </Reveal>
       </div>
     </section>
@@ -82,11 +82,11 @@ function FinalCTA() {
           <h2 className="pu-display" style={{ color: '#fff' }}>Seu dinheiro.<br />Do seu jeito.</h2>
           <p className="pu-lead" style={{ color: 'rgba(255,255,255,.82)' }}>Comece a entender, organizar e cuidar melhor das suas finanças.</p>
           <div className="pu-actions">
-            <Button variant="accent" size="lg" iconRight="arrow-right" as="a" href="https://app.poupeu.com/">Começar agora</Button>
+            <Button variant="accent" size="lg" iconRight="arrow-right" as="a" href={APP_URL}>Começar agora</Button>
           </div>
         </Reveal>
         <Reveal delay={120} style={{ display: 'flex', justifyContent: 'center' }}>
-          <Mascot state="celebrating" size={280} className="pu-mascot-nudge" style={{ filter: 'drop-shadow(0 18px 32px rgba(0,0,0,.22))' }} />
+          <Mascot state="celebrating" size={280} className="pu-mascot-nudge pu-finalcta-mascot" style={{ filter: 'drop-shadow(0 18px 32px rgba(0,0,0,.22))' }} />
         </Reveal>
       </div>
     </section>

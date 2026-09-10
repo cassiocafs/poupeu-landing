@@ -10,14 +10,14 @@ function Header() {
   return (
     <header className="pu-header">
       <div className="pu-header-in">
-        <a href="#top" aria-label="Poupeu — início" style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="assets/mascot-cut/logo-horizontal.png" alt="Poupeu" style={{ height: 40, width: 'auto' }} />
+        <a href="#top" aria-label="Poupeu — início" className="pu-logo" style={{ display: 'flex', alignItems: 'center' }}>
+          <img src="assets/mascot-cut/logo-horizontal.png" alt="Poupeu" style={{ height: 48, width: 'auto' }} />
         </a>
         <nav className="pu-nav" aria-label="Navegação principal">
           {NAV.map(n => <a key={n.label} href={n.href}>{n.label}</a>)}
         </nav>
-        <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 12 }}>
-          <span className="pu-hide-sm"><Button size="sm" as="a" href="https://app.poupeu.com/">Começar agora</Button></span>
+        <div className="pu-header-actions" style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 12 }}>
+          <span className="pu-hide-sm"><Button size="sm" as="a" href={APP_URL}>Começar agora</Button></span>
           <button className="pu-burger" aria-expanded={open} aria-label={open ? 'Fechar menu' : 'Abrir menu'} onClick={() => setOpen(!open)}>
             <Icon name={open ? 'x' : 'menu'} size={22} color="var(--green-900)" />
           </button>
@@ -25,15 +25,15 @@ function Header() {
       </div>
       <div className={'pu-mobile-menu' + (open ? ' open' : '')}>
         {NAV.map(n => <a key={n.label} href={n.href} onClick={() => setOpen(false)}>{n.label}</a>)}
-        <Button fullWidth as="a" href="https://app.poupeu.com/" onClick={() => setOpen(false)}>Começar agora</Button>
+        <Button fullWidth as="a" href={APP_URL} onClick={() => setOpen(false)}>Começar agora</Button>
       </div>
     </header>
   );
 }
 
-function FloatCard({ icon, label, value, style, cls = 'pu-float' }) {
+function FloatCard({ icon, label, value, style, cls = 'pu-float', className = '' }) {
   return (
-    <div className={cls} style={{
+    <div className={cls + (className ? ' ' + className : '')} style={{
       position: 'absolute', display: 'flex', alignItems: 'center', gap: 10,
       background: 'var(--surface-card)', border: '1px solid var(--border-subtle)',
       borderRadius: 'var(--radius-card)', padding: '10px 14px', boxShadow: 'var(--shadow-md)', ...style,
@@ -57,18 +57,18 @@ function Hero() {
         <h1 className="pu-display" style={{ margin: '20px 0 0' }}>Seu dinheiro,<br />do seu jeito.</h1>
         <p className="pu-lead">Organize suas finanças, acompanhe seus gastos e entenda melhor o seu dinheiro — de um jeito simples e sem complicação.</p>
         <div className="pu-actions">
-          <Button size="lg" iconRight="arrow-right" as="a" href="https://app.poupeu.com/">Começar agora</Button>
+          <Button size="lg" iconRight="arrow-right" as="a" href={APP_URL}>Começar agora</Button>
           <Button size="lg" variant="secondary" as="a" href="#produto">Conheça o Poupeu</Button>
         </div>
         <p style={{ margin: '20px 0 0', font: 'var(--type-body-sm)', color: 'var(--text-muted)' }}>Simples para começar. Feito para acompanhar você.</p>
       </Reveal>
-      <Reveal delay={120} style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
-        <div style={{ position: 'absolute', inset: '-6% -4% 8%', background: 'var(--cream-bg)', borderRadius: '48% 42% 46% 44%' }}></div>
-        <div style={{ position: 'relative' }}>
+      <Reveal delay={120} className="pu-hero-visual-wrap" style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
+        <div className="pu-hero-blob" style={{ position: 'absolute', inset: '-6% -4% 8%', background: 'var(--cream-bg)', borderRadius: '48% 42% 46% 44%' }}></div>
+        <div className="pu-hero-visual" style={{ position: 'relative' }}>
           <PhoneFrame width={352}><ScreenHome /></PhoneFrame>
-          <Mascot state="welcome" size={190} className="pu-mascot-nudge" style={{ position: 'absolute', left: -132, bottom: -14, filter: 'drop-shadow(0 12px 24px rgba(13,91,46,.16))' }} />
-          <FloatCard icon="target" label="Minha viagem" value="65%" style={{ top: 44, right: -78 }} />
-          <FloatCard icon="piggy-bank" label="Sobrou" value="R$ 2.610" cls="pu-float-b" style={{ bottom: 96, right: -66 }} />
+          <Mascot state="welcome" size={190} className="pu-mascot-nudge pu-hero-mascot" style={{ position: 'absolute', left: -132, bottom: -14, filter: 'drop-shadow(0 12px 24px rgba(13,91,46,.16))' }} />
+          <FloatCard icon="target" label="Minha viagem" value="65%" className="pu-hero-fc" style={{ top: 44, right: -78 }} />
+          <FloatCard icon="piggy-bank" label="Sobrou" value="R$ 2.610" cls="pu-float-b" className="pu-hero-fc" style={{ bottom: 96, right: -66 }} />
         </div>
       </Reveal>
     </section>

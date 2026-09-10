@@ -36,8 +36,8 @@ function ProductShowcase() {
     <section className="pu-sec">
       <div className="pu-wrap pu-split" style={{ gap: 72 }}>
         <Reveal style={{ display: 'flex', justifyContent: 'center' }}>
-          <div style={{ position: 'relative' }}>
-            <div style={{ position: 'absolute', inset: '6% -12%', background: 'var(--green-100)', borderRadius: 'var(--radius-card-special)' }}></div>
+          <div className="pu-showcase-visual" style={{ position: 'relative' }}>
+            <div className="pu-showcase-blob" style={{ position: 'absolute', inset: '6% -12%', background: 'var(--green-100)', borderRadius: 'var(--radius-card-special)' }}></div>
             <PhoneFrame width={358} style={{ position: 'relative' }}><ScreenHome /></PhoneFrame>
           </div>
         </Reveal>
@@ -91,11 +91,11 @@ function Goals() {
         <div className="pu-split" style={{ marginTop: 64, gap: 56 }}>
           <Reveal>
             <Card padding="roomy" radius="var(--radius-card-special)" elevation="md" style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
+              <div className="pu-goal-head" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
                 <div>
                   <p className="pu-eyebrow" style={{ margin: 0 }}>Viagem</p>
-                  <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginTop: 6 }}>
-                    <span style={{ font: 'var(--weight-extrabold) 30px/1.1 var(--font-numeric)', letterSpacing: 'var(--tracking-tight)', color: 'var(--green-900)' }}>R$ 3.250</span>
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginTop: 6, flexWrap: 'wrap' }}>
+                    <span className="pu-goal-amount" style={{ font: 'var(--weight-extrabold) 30px/1.1 var(--font-numeric)', letterSpacing: 'var(--tracking-tight)', color: 'var(--green-900)' }}>R$ 3.250</span>
                     <span style={{ font: 'var(--type-body)', color: 'var(--text-muted)' }}>/ R$ 5.000</span>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ function Goals() {
               <p className="pu-body" style={{ font: 'var(--type-body-sm)' }}>Faltam R$ 1.750 para realizar.</p>
             </Card>
           </Reveal>
-          <Reveal delay={120} style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+          <Reveal delay={120} className="pu-goals-celebrate" style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
             <Mascot state="celebrating" size={150} className="pu-mascot-nudge" style={{ flex: 'none' }} />
             <div>
               <h3 className="pu-h3">Você está mais perto do que imagina.</h3>

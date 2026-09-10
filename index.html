@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="_ds/poupeu-design-system-d64c012e-6551-4caf-a702-85f101a95d60/tokens/base.css">
 <link rel="stylesheet" href="_ds/poupeu-design-system-d64c012e-6551-4caf-a702-85f101a95d60/styles.css">
 <style>
-html{scroll-behavior:smooth;scroll-padding-top:88px}
-body{background:var(--neutral-0);overflow-x:hidden}
+html{scroll-behavior:smooth;scroll-padding-top:88px;overflow-x:hidden}
+body{background:var(--neutral-0);overflow-x:hidden;max-width:100vw}
 .pu-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 .pu-sec{padding:96px 0}
 .pu-sec-tight{padding:72px 0}
@@ -49,7 +49,17 @@ body{background:var(--neutral-0);overflow-x:hidden}
 /* reveal */
 .pu-rev{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease-standard),transform .6s var(--ease-standard)}
 .pu-rev.pu-in{opacity:1;transform:none}
-#root footer img{flex:none;width:auto!important;height:44px;align-self:flex-start}
+#root footer img{flex:none;width:auto!important;height:48px!important;align-self:flex-start}
+/* header */
+.pu-header-in{gap:16px}
+.pu-header-actions{margin-left:auto}
+.pu-logo img{display:block}
+/* closing CTA (banda "Pronto para começar do seu jeito?") */
+.pu-closing-cta{position:relative;overflow:hidden;background:var(--green-900);border-radius:var(--radius-card-special);padding:32px 40px;display:flex;align-items:center;gap:24px}
+.pu-closing-cta-mascot{margin-bottom:-32px}
+.pu-closing-cta-body{flex:1;min-width:0}
+.pu-closing-cta-btn{flex:none}
+.pu-hero-visual,.pu-showcase-visual{max-width:100%}
 .pu-phone{--text-display:30px}
 .pu-phone [style*="font-numeric"]{white-space:nowrap}
 @keyframes pu-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
@@ -66,6 +76,15 @@ body{background:var(--neutral-0);overflow-x:hidden}
 .pu-trio{grid-template-columns:1fr;gap:40px}
 .pu-nav{display:none}
 .pu-burger{display:flex}
+.pu-showcase-blob{inset:4% -4%}
+.pu-hero-blob{inset:-4% -2% 6%}
+.pu-goals-celebrate{flex-direction:column;text-align:center;gap:24px}
+}
+@media(max-width:760px){
+.pu-closing-cta{flex-direction:column;text-align:center;padding:32px 24px;gap:16px}
+.pu-closing-cta-mascot{margin-bottom:0}
+.pu-closing-cta-body{flex:none}
+.pu-closing-cta-btn{width:100%}
 }
 @media(max-width:640px){
 .pu-sec,.pu-sec-tight{padding:56px 0}
@@ -74,6 +93,17 @@ body{background:var(--neutral-0);overflow-x:hidden}
 .pu-grid3,.pu-grid2,.pu-grid4{grid-template-columns:1fr}
 .pu-actions>*{width:100%}
 .pu-hide-sm{display:none!important}
+/* telas de celular nunca estouram a largura no mobile */
+.pu-phone{max-width:320px!important}
+.pu-phone{--type-money-lg:var(--weight-bold) 26px/1.1 var(--font-numeric)}
+/* hero: mascote abaixo do celular, sem cortes; cartões flutuantes ocultos */
+.pu-hero-visual{display:flex;flex-direction:column;align-items:center}
+.pu-hero-mascot{position:static!important;left:auto!important;bottom:auto!important;width:150px!important;margin:-36px auto 0!important}
+.pu-hero-fc{display:none!important}
+.pu-hero-blob{inset:-2% -2% 6%}
+.pu-showcase-blob{display:none}
+.pu-finalcta-mascot{width:200px!important}
+.pu-goal-amount{font-size:24px!important}
 }
 @media(prefers-reduced-motion:reduce){.pu-rev{opacity:1;transform:none;transition:none}.pu-float,.pu-float-b{animation:none}}
 </style>
