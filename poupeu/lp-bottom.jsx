@@ -100,7 +100,7 @@ function Footer() {
       trust={[{ title: 'Seu dinheiro, do seu jeito.', detail: 'Organização financeira pessoal, feita no Brasil.' }]}
       columns={[
         { title: 'Produto', links: ['Produto', 'Como funciona', 'Benefícios'] },
-        { title: 'Legal', links: ['Privacidade', 'Termos'] },
+        { title: 'Legal', links: [{ label: 'Privacidade', href: 'https://app.poupeu.com/privacidade' }, { label: 'Termos', href: 'https://app.poupeu.com/termos' }] },
       ]}
       legal="© 2026 Poupeu. Todos os direitos reservados."
     />
