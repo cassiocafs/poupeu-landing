@@ -95,7 +95,7 @@ function FinalCTA() {
 
 const FOOTER_COLUMNS = [
   { title: 'Produto', links: ['Produto', 'Como funciona', 'Benefícios'] },
-  { title: 'Legal', links: ['Privacidade', 'Termos'] },
+  { title: 'Legal', links: [{ label: 'Privacidade', href: 'https://app.poupeu.com/privacidade' }, { label: 'Termos', href: 'https://app.poupeu.com/termos' }] },
 ];
 
 function Footer() {
@@ -111,7 +111,11 @@ function Footer() {
           {FOOTER_COLUMNS.map(c => (
             <div key={c.title} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
               <span style={{ font: 'var(--type-caption)', letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-muted)' }}>{c.title}</span>
-              {c.links.map(l => <a key={l} href="#" style={{ font: 'var(--type-body-sm)', color: 'var(--text-body)', fontWeight: 'var(--weight-regular)' }}>{l}</a>)}
+              {c.links.map(l => {
+                const label = typeof l === 'string' ? l : l.label;
+                const href = typeof l === 'string' ? '#' : l.href || '#';
+                return <a key={label} href={href} style={{ font: 'var(--type-body-sm)', color: 'var(--text-body)', fontWeight: 'var(--weight-regular)' }}>{label}</a>;
+              })}
             </div>
           ))}
         </div>

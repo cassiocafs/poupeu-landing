@@ -262,7 +262,13 @@ const FOOTER_COLUMNS = [{
   links: ['Produto', 'Como funciona', 'Benefícios']
 }, {
   title: 'Legal',
-  links: ['Privacidade', 'Termos']
+  links: [{
+    label: 'Privacidade',
+    href: 'https://app.poupeu.com/privacidade'
+  }, {
+    label: 'Termos',
+    href: 'https://app.poupeu.com/termos'
+  }]
 }];
 function Footer() {
   return /*#__PURE__*/React.createElement("footer", {
@@ -328,15 +334,19 @@ function Footer() {
       textTransform: 'uppercase',
       color: 'var(--text-muted)'
     }
-  }, c.title), c.links.map(l => /*#__PURE__*/React.createElement("a", {
-    key: l,
-    href: "#",
-    style: {
-      font: 'var(--type-body-sm)',
-      color: 'var(--text-body)',
-      fontWeight: 'var(--weight-regular)'
-    }
-  }, l)))))), /*#__PURE__*/React.createElement("div", {
+  }, c.title), c.links.map(l => {
+    const label = typeof l === 'string' ? l : l.label;
+    const href = typeof l === 'string' ? '#' : l.href || '#';
+    return /*#__PURE__*/React.createElement("a", {
+      key: label,
+      href: href,
+      style: {
+        font: 'var(--type-body-sm)',
+        color: 'var(--text-body)',
+        fontWeight: 'var(--weight-regular)'
+      }
+    }, label);
+  }))))), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 28,
       textAlign: 'center',
