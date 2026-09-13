@@ -1,0 +1,12 @@
+{
+  "name": "poupeu-landing",
+  "private": true,
+  "scripts": {
+    "build": "babel poupeu --out-dir poupeu/dist --presets=@babel/preset-react --extensions .jsx --out-file-extension .js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.0",
+    "@babel/core": "^7.28.0",
+    "@babel/preset-react": "^7.27.1"
+  }
+}

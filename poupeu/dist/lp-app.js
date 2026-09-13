@@ -1,0 +1,4 @@
+function LandingPage() {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(BrandIntroduction, null), /*#__PURE__*/React.createElement(BrandPersonality, null), /*#__PURE__*/React.createElement(Features, null), /*#__PURE__*/React.createElement(ProductShowcase, null), /*#__PURE__*/React.createElement(Goals, null), /*#__PURE__*/React.createElement(MascotGuide, null), /*#__PURE__*/React.createElement(NoJudgement, null), /*#__PURE__*/React.createElement(HowItWorks, null), /*#__PURE__*/React.createElement(ProductProof, null), /*#__PURE__*/React.createElement(FinalCTA, null)), /*#__PURE__*/React.createElement(Footer, null));
+}
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(LandingPage, null));
