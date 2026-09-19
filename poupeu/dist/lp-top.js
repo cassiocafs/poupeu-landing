@@ -10,6 +10,9 @@ const NAV = [{
 }, {
   label: 'Metas',
   href: '#metas'
+}, {
+  label: 'Planos',
+  href: '#planos'
 }];
 function Header() {
   const [open, setOpen] = React.useState(false);

@@ -13,6 +13,7 @@ function LandingPage() {
         <NoJudgement />
         <HowItWorks />
         <ProductProof />
+        <Pricing />
         <FinalCTA />
       </main>
       <Footer />

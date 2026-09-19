@@ -3,6 +3,7 @@ const NAV = [
   { label: 'Como funciona', href: '#como-funciona' },
   { label: 'Benefícios', href: '#beneficios' },
   { label: 'Metas', href: '#metas' },
+  { label: 'Planos', href: '#planos' },
 ];
 
 function Header() {
